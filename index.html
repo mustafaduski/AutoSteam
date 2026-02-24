@@ -3,65 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoSteam Pro | Future is Here</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <title>AutoSteam Pro | Official Enterprise Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="bg-glow"></div>
-    
-    <div class="top-nav">
-        <div class="logo">AUTO<span>STEAM</span></div>
-        <div class="status">● SYSTEM ACTIVE</div>
+    <div class="top-announcement">
+        <span>GLOBAL PRIORITY SHIPPING ACTIVATED ✈️</span>
     </div>
 
-    <main class="container">
-        <section class="main-frame">
-            <div class="glass-card">
-                <div class="badge-new">NEW TECHNOLOGY 2026</div>
-                <h1 class="glitch-text">SMART IRONING</h1>
-                <p class="desc">The first robotic garment care system with AI-controlled steam. Effortless perfection in 180 seconds.</p>
-                
-                <div class="image-wrapper">
-                    <img src="product.png" alt="AutoSteam" class="floating-img">
-                </div>
-
-                <div class="pricing-box">
-                    <div class="price-row">
-                        <span class="label">CURRENT PRICE</span>
-                        <span class="value">79.99 USDT</span>
-                    </div>
-                    <div class="price-row old">
-                        <span class="label">RETAIL PRICE</span>
-                        <span>99.99 USDT</span>
-                    </div>
-                </div>
-
-                <button class="cypher-btn" id="mainBuyBtn" onclick="showPaymentInfo()">
-                    <span class="btn-content">INITIALIZE PURCHASE</span>
-                    <span class="btn-glitch"></span>
-                </button>
-
-                <div id="paymentDetails" class="payment-panel">
-                    <div class="panel-header">SECURE ENCRYPTED GATEWAY</div>
-                    <div class="qr-area">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i&color=00f2ff&bgcolor=000" alt="QR">
-                    </div>
-                    <div class="address-box">
-                        <code id="walletAddr">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</code>
-                        <button onclick="copyWallet()">COPY</button>
-                    </div>
-                    <p class="note">ONLY SEND USDT (TRC20)</p>
-                </div>
+    <main class="app-container">
+        <section class="hero-section">
+            <div class="brand-tag">PREMIUM HOUSEHOLD ROBOTICS</div>
+            <h1>AutoSteam Pro <span class="v2">V2.0</span></h1>
+            <p>Automated Garment Rejuvenation System.</p>
+            
+            <div class="main-display">
+                <img src="product.png" alt="AutoSteam Pro" class="hero-image">
+                <div class="radial-bg"></div>
             </div>
         </section>
 
-        <div class="stats-grid">
-            <div class="stat-item"><span>850W</span><p>POWER</p></div>
-            <div class="stat-item"><span>3MIN</span><p>SPEED</p></div>
-            <div class="stat-item"><span>EU</span><p>STOCK</p></div>
-        </div>
+        <section class="checkout-wrapper">
+            <div class="checkout-card" id="checkoutFlow">
+                
+                <div id="step1" class="flow-step active">
+                    <div class="step-header">
+                        <span class="step-num">01</span>
+                        <h3>SELECT CONFIGURATION</h3>
+                    </div>
+                    <div class="product-selection">
+                        <div class="selection-item selected">
+                            <div class="sel-info">
+                                <strong>AutoSteam Pro Full Kit</strong>
+                                <span>Global Warranty + DHL Express</span>
+                            </div>
+                            <div class="sel-price">79.99 USDT</div>
+                        </div>
+                    </div>
+                    <button class="next-btn" onclick="goToStep(2)">PROCEED TO SHIPPING</button>
+                </div>
+
+                <div id="step2" class="flow-step">
+                    <div class="step-header">
+                        <span class="step-num">02</span>
+                        <h3>SHIPPING METHOD</h3>
+                    </div>
+                    <div class="shipping-grid">
+                        <div class="ship-option">
+                            <input type="radio" name="ship" checked>
+                            <label><strong>Standard Shipping</strong> (5-7 Days) - <b>FREE</b></label>
+                        </div>
+                        <div class="ship-option">
+                            <input type="radio" name="ship">
+                            <label><strong>Priority Air</strong> (2-3 Days) - <b>+5 USDT</b></label>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="back-btn" onclick="goToStep(1)">BACK</button>
+                        <button class="next-btn" onclick="goToStep(3)">GENERATE INVOICE</button>
+                    </div>
+                </div>
+
+                <div id="step3" class="flow-step">
+                    <div class="step-header">
+                        <span class="step-num">03</span>
+                        <h3>CRYPTO GATEWAY</h3>
+                    </div>
+                    
+                    <div class="invoice-box">
+                        <div class="inv-row"><span>Product:</span> <span>AutoSteam Pro</span></div>
+                        <div class="inv-row"><span>Network:</span> <span>TRC-20 (Tron)</span></div>
+                        <div class="inv-row total"><span>Total Amount:</span> <span>79.99 USDT</span></div>
+                        
+                        <div class="qr-wrapper">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i&color=ffffff&bgcolor=1a1a1a" alt="QR Code">
+                        </div>
+
+                        <div class="wallet-display">
+                            <code id="walletAddr">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</code>
+                            <button onclick="copyWallet()" class="copy-pill">COPY</button>
+                        </div>
+                    </div>
+
+                    <div class="confirmation-info">
+                        <p>Payment Status: <span class="status-pulse">Awaiting Transfer...</span></p>
+                        <small>Send payment screenshot to support@autosteam.pro for activation.</small>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
