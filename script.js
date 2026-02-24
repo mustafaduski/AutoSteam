@@ -1,3 +1,10 @@
 function payWithCrypto() {
-    alert("Please send 79.99 USDT (TRC20) to this address: [YOUR_WALLET_ADDRESS_HERE]");
+    const walletAddress = "ناونیشانی_وۆڵێتەکەت_لێرە_دابنێ";
+    const amount = "79.99 USDT (TRC20)";
+    
+    const message = `To complete your order, please send ${amount} to the following address:\n\n${walletAddress}\n\nAfter payment, send a screenshot to our support.`;
+    
+    alert(message);
+    // دەتوانیت لێرەدا کۆدێک دابنێیت کە ناونیشانەکە ئۆتۆماتیکی کۆپی بکات
+    navigator.clipboard.writeText(walletAddress);
 }
