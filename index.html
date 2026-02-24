@@ -3,47 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoSteam Pro | The Art of Ironing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap" rel="stylesheet">
+    <title>AutoSteam Global | B2B Marketplace</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <section class="main-view">
-        <header>
-            <div class="logo">AUTOSTEAM</div>
-        </header>
-
-        <div class="content">
-            <h1 class="fade-in">Perfectly Pressed.<br>Automatically.</h1>
-            <p class="subtitle fade-in">The ultimate garment care system. Effortless, fast, and professional.</p>
-            
-            <div class="product-hero">
-                <img src="product.png" alt="AutoSteam Pro" class="hero-img">
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">Auto<span>Steam</span>.com</div>
+            <div class="search-bar">
+                <input type="text" placeholder="What are you looking for...">
+                <button>Search</button>
             </div>
-
-            <div class="action-zone fade-in">
-                <div class="price-pill">79.99 USDT</div>
-                <button class="order-btn" onclick="openPayment()">Get Yours Now</button>
-            </div>
+            <div class="user-menu">Sign In | Orders</div>
         </div>
+    </header>
 
-        <div id="paymentOverlay" class="overlay">
-            <div class="payment-modal">
-                <button class="close-btn" onclick="closePayment()">✕</button>
-                <h3>Official Checkout</h3>
-                <p>Send <b>79.99 USDT</b> via <b>TRC20</b></p>
-                <div class="qr-box">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i" alt="QR">
+    <div class="main-layout">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li>Home Appliances</li>
+                <li>Garment Care</li>
+                <li>Smart Robotics</li>
+                <li>New Arrivals</li>
+            </ul>
+        </aside>
+
+        <main class="product-grid">
+            <div class="product-card">
+                <img src="product.png" alt="Product">
+                <div class="info">
+                    <h4>AutoSteam Pro V2 - Industrial Grade</h4>
+                    <p class="price">US $79.99 <span>/ Piece</span></p>
+                    <p class="min-order">Min. Order: 1 Piece</p>
+                    <button class="contact-btn" onclick="openPayment()">Contact Supplier</button>
                 </div>
-                <div class="wallet-field">
-                    <code id="walletAddr">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</code>
-                    <button onclick="copyWallet()">Copy</button>
-                </div>
-                <small>Send screenshot to: support@autosteam.pro</small>
             </div>
+
+            <div class="product-card">
+                <img src="https://sc04.alicdn.com/kf/H983675e4e84b4c73a817478052163b45O.jpg" alt="Item">
+                <div class="info">
+                    <h4>Portable Travel Steamer 1500W</h4>
+                    <p class="price">US $45.00 <span>/ Piece</span></p>
+                    <p class="min-order">Min. Order: 5 Pieces</p>
+                    <button class="contact-btn">Inquiry</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://sc04.alicdn.com/kf/HTB1.V8mXvfsK1RjSszgq6y8BXXaY.jpg" alt="Item">
+                <div class="info">
+                    <h4>Smart Hanger System - Pro</h4>
+                    <p class="price">US $120.00 <span>/ Piece</span></p>
+                    <p class="min-order">Min. Order: 1 Piece</p>
+                    <button class="contact-btn">Inquiry</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="paymentOverlay" class="overlay">
+        <div class="payment-modal">
+            <h3>Secure Payment Gateway</h3>
+            <p>Scan to complete your order</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i" alt="QR">
+            <div class="wallet">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</div>
+            <button onclick="closePayment()">Close</button>
         </div>
-    </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
