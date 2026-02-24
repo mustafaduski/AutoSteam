@@ -3,22 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoSteam - The Future of Ironing</title>
+    <title>AutoSteam Pro | Professional Clothes Care</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="top-bar">
+        ⚡ LIMITED OFFER: 20% OFF TODAY ONLY! Ends in: <span id="timer">15:00</span>
+    </div>
+
     <header>
-        <h1>AutoSteam Pro</h1>
+        <nav>
+            <div class="logo">AutoSteam<span>Pro</span></div>
+        </nav>
     </header>
 
-    <section class="hero">
-        <img src="product-image.jpg" alt="Automatic Ironing Machine">
-        <h2>Iron & Dry Your Clothes in 3 Minutes!</h2>
-        <p>Effortless, fast, and perfect for busy professionals.</p>
-        <div class="price">Price: 79.99 USDT</div>
-        <button onclick="payWithCrypto()">Buy Now with USDT</button>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="badge">Europe's #1 Home Gadget</div>
+            <h1>Iron & Dry Your Clothes in 3 Minutes!</h1>
+            <p>The smartest way to get wrinkle-free clothes without the effort. Perfect for professionals and travelers.</p>
+            
+            <div class="product-image">
+                <img src="https://sc04.alicdn.com/kf/H7427845f462a4b9588972e735e8081f2W.jpg" alt="AutoSteam Machine">
+            </div>
+
+            <div class="price-container">
+                <span class="old-price">99.99 USDT</span>
+                <span class="new-price">79.99 USDT</span>
+            </div>
+
+            <button class="buy-btn" onclick="payWithCrypto()">Buy Now with USDT (TRC20)</button>
+            
+            <div class="trust-badges">
+                <span>🛡️ Secure Crypto Payment</span>
+                <span>📦 Fast EU Shipping</span>
+                <span>⭐ 4.9/5 Rating</span>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h3>Save Time</h3>
+                <p>Fully irons and dries a shirt in less than 3 minutes while you have breakfast.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">👔</div>
+                <h3>Perfect Results</h3>
+                <p>Uses 850W steam technology to remove even the toughest wrinkles gently.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🌱</div>
+                <h3>Gentle on Fabric</h3>
+                <p>Safe for all iron-friendly materials. No risk of burning your expensive clothes.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AutoSteam Pro. All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
+    
+    <script>
+        let time = 900; // 15 خولەک بە چرکە
+        const timerElement = document.getElementById('timer');
+        setInterval(() => {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            timerElement.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            if (time > 0) time--;
+        }, 1000);
+    </script>
+
 </body>
 </html>
