@@ -3,102 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoSteam Pro | Next-Gen Garment Care</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>AutoSteam Pro | Future is Here</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="live-notify" class="notify-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/5219/5219258.png" alt="user">
-        <div class="notify-text">
-            <p id="buyer-name">Thomas from Berlin</p>
-            <span>just secured an AutoSteam Pro!</span>
-        </div>
+    <div class="bg-glow"></div>
+    
+    <div class="top-nav">
+        <div class="logo">AUTO<span>STEAM</span></div>
+        <div class="status">● SYSTEM ACTIVE</div>
     </div>
 
-    <div class="top-bar">
-        FREE GLOBAL SHIPPING VIA DHL 📦 | <span id="timer">15:00</span> LEFT
-    </div>
-
-    <header>
-        <div class="logo">AutoSteam<span>PRO</span></div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-badge">ADVANCED ROBOTICS</div>
-            <h1>Perfect Ironing.<br>Zero Effort.</h1>
-            <p class="hero-subtitle">The world's first fully automatic steam system for professional results at home.</p>
-            
-            <div class="product-container">
-                <img src="product.png" alt="AutoSteam Pro Machine" class="main-img">
-                <div class="glow-effect"></div>
-            </div>
-
-            <div class="price-section">
-                <div class="price-tags">
-                    <span class="old-price">99.99 USDT</span>
-                    <span class="new-price">79.99 USDT</span>
-                </div>
-                <p class="save-tag">SAVE 20% TODAY</p>
-            </div>
-
-            <div class="action-area">
-                <button class="buy-btn" id="mainBuyBtn" onclick="showPaymentInfo()">GET YOURS NOW</button>
+    <main class="container">
+        <section class="main-frame">
+            <div class="glass-card">
+                <div class="badge-new">NEW TECHNOLOGY 2026</div>
+                <h1 class="glitch-text">SMART IRONING</h1>
+                <p class="desc">The first robotic garment care system with AI-controlled steam. Effortless perfection in 180 seconds.</p>
                 
-                <div id="paymentDetails" class="payment-card" style="display: none;">
-                    <h3 class="invoice-title">Official Crypto Invoice</h3>
-                    <div class="qr-container">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i&color=00ff9d&bgcolor=161616" alt="Payment QR">
-                    </div>
-                    
-                    <div class="wallet-box">
-                        <code id="walletAddr">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</code>
-                        <button class="copy-icon" onclick="copyWallet()">COPY</button>
-                    </div>
+                <div class="image-wrapper">
+                    <img src="product.png" alt="AutoSteam" class="floating-img">
+                </div>
 
-                    <div class="payment-notes">
-                        <p>🔹 Network: <strong>TRC20 (Tron)</strong></p>
-                        <p>🔹 Total: <strong>79.99 USDT</strong></p>
-                        <hr class="dark-hr">
-                        <p class="support-mail">Send confirmation to: <strong>support@autosteam.pro</strong></p>
+                <div class="pricing-box">
+                    <div class="price-row">
+                        <span class="label">CURRENT PRICE</span>
+                        <span class="value">79.99 USDT</span>
+                    </div>
+                    <div class="price-row old">
+                        <span class="label">RETAIL PRICE</span>
+                        <span>99.99 USDT</span>
                     </div>
                 </div>
-            </div>
 
-            <div class="trust-bar">
-                <div class="trust-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Express_logo.svg" alt="DHL"></div>
-                <div class="trust-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_FedEx.svg" alt="FedEx"></div>
-                <div class="trust-item"><span>🛡️ 2-YEAR WARRANTY</span></div>
+                <button class="cypher-btn" id="mainBuyBtn" onclick="showPaymentInfo()">
+                    <span class="btn-content">INITIALIZE PURCHASE</span>
+                    <span class="btn-glitch"></span>
+                </button>
+
+                <div id="paymentDetails" class="payment-panel">
+                    <div class="panel-header">SECURE ENCRYPTED GATEWAY</div>
+                    <div class="qr-area">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i&color=00f2ff&bgcolor=000" alt="QR">
+                    </div>
+                    <div class="address-box">
+                        <code id="walletAddr">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</code>
+                        <button onclick="copyWallet()">COPY</button>
+                    </div>
+                    <p class="note">ONLY SEND USDT (TRC20)</p>
+                </div>
             </div>
         </section>
 
-        <section class="specs">
-            <div class="spec-card">
-                <span class="spec-icon">⚡</span>
-                <h3>High Power</h3>
-                <p>850W Turbo Steam</p>
-            </div>
-            <div class="spec-card">
-                <span class="spec-icon">⏲️</span>
-                <h3>Fast Cycle</h3>
-                <p>3-Min Completion</p>
-            </div>
-            <div class="spec-card">
-                <span class="spec-icon">💎</span>
-                <h3>Premium</h3>
-                <p>Fabric Safe Tech</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-wrap">
-            <p>&copy; 2026 AUTOSTEAM GLOBAL INDUSTRIES. ALL RIGHTS RESERVED.</p>
-            <p class="footer-sub">Designed in Germany | Secure TRC20 Gateway</p>
+        <div class="stats-grid">
+            <div class="stat-item"><span>850W</span><p>POWER</p></div>
+            <div class="stat-item"><span>3MIN</span><p>SPEED</p></div>
+            <div class="stat-item"><span>EU</span><p>STOCK</p></div>
         </div>
-    </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
