@@ -33,7 +33,29 @@
                 <span class="new-price">79.99 USDT</span>
             </div>
 
-            <button class="buy-btn" onclick="payWithCrypto()">Buy Now with USDT (TRC20)</button>
+            <div class="checkout-container">
+                <button class="buy-btn" id="mainBuyBtn" onclick="showPaymentInfo()">Buy Now with USDT (TRC20)</button>
+                
+                <div id="paymentDetails" class="payment-box" style="display: none;">
+                    <p class="payment-title">Scan or Copy USDT Address:</p>
+                    
+                    <div class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i" alt="USDT QR Code">
+                    </div>
+
+                    <div class="wallet-wrapper">
+                        <code id="walletAddr">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</code>
+                        <button class="copy-btn" onclick="copyWallet()">Copy</button>
+                    </div>
+                    
+                    <div class="payment-instructions">
+                        <p>⚠️ Network: <b>TRC20 (Tron)</b></p>
+                        <p>⚠️ Amount: <b>79.99 USDT</b></p>
+                        <hr>
+                        <p>After payment, send your screenshot to: <b>support@autosteam.pro</b></p>
+                    </div>
+                </div>
+            </div>
             
             <div class="trust-badges">
                 <span>🛡️ Secure Crypto Payment</span>
@@ -66,9 +88,8 @@
     </footer>
 
     <script src="script.js"></script>
-    
     <script>
-        let time = 900; // 15 خولەک بە چرکە
+        let time = 900; 
         const timerElement = document.getElementById('timer');
         setInterval(() => {
             let minutes = Math.floor(time / 60);
