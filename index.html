@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoSteam Pro | Official Global Store</title>
+    <title>AutoSteam Pro | Next-Gen Garment Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,96 +12,91 @@
     <div id="live-notify" class="notify-box">
         <img src="https://cdn-icons-png.flaticon.com/512/5219/5219258.png" alt="user">
         <div class="notify-text">
-            <p id="buyer-name">Someone from London</p>
-            <span>just ordered an AutoSteam Pro!</span>
+            <p id="buyer-name">Thomas from Berlin</p>
+            <span>just secured an AutoSteam Pro!</span>
         </div>
     </div>
 
     <div class="top-bar">
-        GLOBAL SHIPPING AVAILABLE 🌍 | LIMITED OFFER: <span id="timer">15:00</span>
+        FREE GLOBAL SHIPPING VIA DHL 📦 | <span id="timer">15:00</span> LEFT
     </div>
 
     <header>
-        <div class="logo">AutoSteam<span>Pro</span></div>
+        <div class="logo">AutoSteam<span>PRO</span></div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="badge">GERMAN ENGINEERING</div>
-            <h1>The Future of Personal Garment Care</h1>
-            <p class="subtitle">Join 10,000+ professionals who upgraded to effortless ironing.</p>
+            <div class="hero-badge">ADVANCED ROBOTICS</div>
+            <h1>Perfect Ironing.<br>Zero Effort.</h1>
+            <p class="hero-subtitle">The world's first fully automatic steam system for professional results at home.</p>
             
-            <div class="product-image">
-                <img src="product.png" alt="AutoSteam Machine">
+            <div class="product-container">
+                <img src="product.png" alt="AutoSteam Pro Machine" class="main-img">
+                <div class="glow-effect"></div>
             </div>
 
-            <div class="price-container">
-                <span class="old-price">99.99 USDT</span>
-                <span class="new-price">79.99 USDT</span>
+            <div class="price-section">
+                <div class="price-tags">
+                    <span class="old-price">99.99 USDT</span>
+                    <span class="new-price">79.99 USDT</span>
+                </div>
+                <p class="save-tag">SAVE 20% TODAY</p>
             </div>
 
-            <div class="checkout-container">
-                <button class="buy-btn" id="mainBuyBtn" onclick="showPaymentInfo()">ORDER NOW - 79.99 USDT</button>
+            <div class="action-area">
+                <button class="buy-btn" id="mainBuyBtn" onclick="showPaymentInfo()">GET YOURS NOW</button>
                 
-                <div id="paymentDetails" class="payment-box" style="display: none; opacity: 0;">
-                    <p class="payment-title">OFFICIAL INVOICE (TRC20)</p>
-                    <div class="qr-code">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i" alt="USDT QR">
+                <div id="paymentDetails" class="payment-card" style="display: none;">
+                    <h3 class="invoice-title">Official Crypto Invoice</h3>
+                    <div class="qr-container">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i&color=00ff9d&bgcolor=161616" alt="Payment QR">
                     </div>
-                    <div class="wallet-wrapper">
+                    
+                    <div class="wallet-box">
                         <code id="walletAddr">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</code>
-                        <button class="copy-btn" onclick="copyWallet()">Copy</button>
+                        <button class="copy-icon" onclick="copyWallet()">COPY</button>
                     </div>
-                    <div class="payment-instructions">
-                        <p>Total: <b>79.99 USDT</b> | Network: <b>TRC20</b></p>
-                        <p>Send screenshot to: <b>support@autosteam.pro</b></p>
+
+                    <div class="payment-notes">
+                        <p>🔹 Network: <strong>TRC20 (Tron)</strong></p>
+                        <p>🔹 Total: <strong>79.99 USDT</strong></p>
+                        <hr class="dark-hr">
+                        <p class="support-mail">Send confirmation to: <strong>support@autosteam.pro</strong></p>
                     </div>
                 </div>
             </div>
 
-            <div class="shipping-info">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Express_logo.svg" alt="DHL">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_FedEx.svg" alt="FedEx">
-                <span>Fast Global Delivery</span>
+            <div class="trust-bar">
+                <div class="trust-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Express_logo.svg" alt="DHL"></div>
+                <div class="trust-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_FedEx.svg" alt="FedEx"></div>
+                <div class="trust-item"><span>🛡️ 2-YEAR WARRANTY</span></div>
             </div>
         </section>
 
-        <section class="how-it-works">
-            <h2>How It Works</h2>
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-num">1</div>
-                    <h4>Hang</h4>
-                    <p>Place your shirt on the AutoSteam hanger.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">2</div>
-                    <h4>Steam</h4>
-                    <p>Activate the 3-minute automatic cycle.</p>
-                </div>
-                <div class="step">
-                    <div class="step-num">3</div>
-                    <h4>Done</h4>
-                    <p>Your garment is dry, fresh, and wrinkle-free.</p>
-                </div>
+        <section class="specs">
+            <div class="spec-card">
+                <span class="spec-icon">⚡</span>
+                <h3>High Power</h3>
+                <p>850W Turbo Steam</p>
+            </div>
+            <div class="spec-card">
+                <span class="spec-icon">⏲️</span>
+                <h3>Fast Cycle</h3>
+                <p>3-Min Completion</p>
+            </div>
+            <div class="spec-card">
+                <span class="spec-icon">💎</span>
+                <h3>Premium</h3>
+                <p>Fabric Safe Tech</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>AutoSteam Global</h4>
-                <p>Redefining home automation since 2024.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Support</h4>
-                <p>Email: help@autosteam.pro</p>
-                <p>Location: Hamburg, Germany</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 AutoSteam Pro. Registered TradeMark.
+        <div class="footer-wrap">
+            <p>&copy; 2026 AUTOSTEAM GLOBAL INDUSTRIES. ALL RIGHTS RESERVED.</p>
+            <p class="footer-sub">Designed in Germany | Secure TRC20 Gateway</p>
         </div>
     </footer>
 
