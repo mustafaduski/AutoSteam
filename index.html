@@ -8,6 +8,14 @@
 </head>
 <body>
 
+    <div id="live-notify" class="notify-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/5219/5219258.png" alt="user">
+        <div class="notify-text">
+            <p id="buyer-name">Someone from Germany</p>
+            <span>just purchased an AutoSteam Pro!</span>
+        </div>
+    </div>
+
     <div class="top-bar">
         ⚡ LIMITED OFFER: 20% OFF TODAY ONLY! Ends in: <span id="timer">15:00</span>
     </div>
@@ -22,7 +30,7 @@
         <section class="hero">
             <div class="badge">Europe's #1 Home Gadget</div>
             <h1>Iron & Dry Your Clothes in 3 Minutes!</h1>
-            <p>The smartest way to get wrinkle-free clothes without the effort. Perfect for professionals and travelers.</p>
+            <p>The smartest way to get wrinkle-free clothes without the effort.</p>
             
             <div class="product-image">
                 <img src="https://sc04.alicdn.com/kf/H7427845f462a4b9588972e735e8081f2W.jpg" alt="AutoSteam Machine">
@@ -36,68 +44,35 @@
             <div class="checkout-container">
                 <button class="buy-btn" id="mainBuyBtn" onclick="showPaymentInfo()">Buy Now with USDT (TRC20)</button>
                 
-                <div id="paymentDetails" class="payment-box" style="display: none;">
+                <div id="paymentDetails" class="payment-box" style="display: none; opacity: 0;">
                     <p class="payment-title">Scan or Copy USDT Address:</p>
-                    
                     <div class="qr-code">
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i" alt="USDT QR Code">
                     </div>
-
                     <div class="wallet-wrapper">
                         <code id="walletAddr">TVWRheHD5zVeXeF3jnWpZrVunaTGLZza3i</code>
                         <button class="copy-btn" onclick="copyWallet()">Copy</button>
                     </div>
-                    
                     <div class="payment-instructions">
                         <p>⚠️ Network: <b>TRC20 (Tron)</b></p>
-                        <p>⚠️ Amount: <b>79.99 USDT</b></p>
                         <hr>
-                        <p>After payment, send your screenshot to: <b>support@autosteam.pro</b></p>
+                        <p>After payment, send screenshot to: <b>support@autosteam.pro</b></p>
                     </div>
                 </div>
             </div>
             
             <div class="trust-badges">
-                <span>🛡️ Secure Crypto Payment</span>
-                <span>📦 Fast EU Shipping</span>
-                <span>⭐ 4.9/5 Rating</span>
+                <span>🛡️ Secure Crypto Payment</span> | <span>📦 Fast EU Shipping</span>
             </div>
         </section>
 
         <section class="features">
-            <div class="feature-card">
-                <div class="icon">⚡</div>
-                <h3>Save Time</h3>
-                <p>Fully irons and dries a shirt in less than 3 minutes while you have breakfast.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">👔</div>
-                <h3>Perfect Results</h3>
-                <p>Uses 850W steam technology to remove even the toughest wrinkles gently.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🌱</div>
-                <h3>Gentle on Fabric</h3>
-                <p>Safe for all iron-friendly materials. No risk of burning your expensive clothes.</p>
-            </div>
+            <div class="feature-card"><h3>⚡ Save Time</h3><p>Irons in 3 minutes.</p></div>
+            <div class="feature-card"><h3>👔 Perfect Results</h3><p>850W Power.</p></div>
+            <div class="feature-card"><h3>🌱 Fabric Safe</h3><p>Safe for all shirts.</p></div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 AutoSteam Pro. All Rights Reserved.</p>
-    </footer>
-
     <script src="script.js"></script>
-    <script>
-        let time = 900; 
-        const timerElement = document.getElementById('timer');
-        setInterval(() => {
-            let minutes = Math.floor(time / 60);
-            let seconds = time % 60;
-            timerElement.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-            if (time > 0) time--;
-        }, 1000);
-    </script>
-
 </body>
 </html>
